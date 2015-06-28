@@ -42,4 +42,3 @@ if(t==noone)
    
 if(t) PacGotoTileNearestXYWLimits(t.x+random(4)-2,t.y+random(4)-2);
 else PacGotoRandomTileWLimits();
-

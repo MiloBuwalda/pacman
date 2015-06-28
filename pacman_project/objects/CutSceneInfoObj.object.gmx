@@ -35,7 +35,7 @@ else
 alarm[0] = 18*room_speed;
 globalvar ThereAreGhosts; ThereAreGhosts = 0;
 globalvar BlueGhostScore; BlueGhostScore = 200;
-globalvar Elroy; Elroy = 0;
+globalvar Elroy; ElroLevely = 0;
 globalvar PacReset; PacReset = 1;
 if(room == Start_room or room == PlayfieldDemo_room)
 {
@@ -54,13 +54,12 @@ if(room == Start_room or room == PlayfieldDemo_room)
     //score = 0;
     globalvar Level,BonusSymbol,BonusPoints,PacManSpeed,PacManDotsSpeed,GhostSpeed,GhostTunnelSpeed,Elroy1DotsLeft,Elroy1Speed,Elroy2DotsLeft,Elroy2Speed,FrightPacManSpeed,FrightPacManDotsSpeed,FrightGhostSpeed,FrightTimeinsec,NumberofFlashes;
     //What level we on?
-    if(room == PlayfieldDemo_room)
-    {
-        
-        globalvar ailastlevel; ailastlevel= 1;
-        Level = ailastlevel;
-    }
-    else
+//    if(room == PlayfieldDemo_room)
+//    {
+ //       globalvar ailastlevel; ailastlevel= 1;
+//        Level = ailastlevel;
+ //   }
+ //   else
         Level = 1;
     //reference position in the data grid
     BonusSymbol = 1

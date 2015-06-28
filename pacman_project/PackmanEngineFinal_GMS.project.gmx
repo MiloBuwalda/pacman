@@ -16,6 +16,7 @@
     <sound>sound\Siren_snd</sound>
     <sound>sound\FrightSiren_snd</sound>
     <sound>sound\EyeSiren_snd</sound>
+    <sound>sound\Mellow_Music</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\allsprites_spr</sprite>
@@ -82,6 +83,7 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\ExperimentScript.gml</script>
     <scripts name="Animation">
       <script>scripts\AnimatePart.gml</script>
     </scripts>
@@ -124,6 +126,7 @@
       <script>scripts\PacGotoRandomTileWLimits.gml</script>
     </scripts>
     <script>scripts\ShowXY.gml</script>
+    <script>scripts\ExperimentGlobal.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\PausedObj</object>

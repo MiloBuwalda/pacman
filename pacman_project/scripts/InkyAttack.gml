@@ -62,4 +62,3 @@ else
     
     GhostGotoTileNearestXYWLimits((PackmanObj.x + lengthdir_x(12*2,PackmanObj.direction) + lengthdir_x(12*2,180)) + lengthdir_x(BlinkyVector, VectorDirection), (PackmanObj.y + lengthdir_y(12*2,PackmanObj.direction) + lengthdir_y(12*2,180)) + lengthdir_y(BlinkyVector, VectorDirection));
 }
-
