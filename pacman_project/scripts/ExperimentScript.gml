@@ -6,11 +6,28 @@ if(current_time/1000 >= global.nextSecond){
     global.lastPrintedSecond++;
     
     //Calculate distance between pacman and each of the ghosts
+    if(instance_exists(BlinkyObj)){
     var distanceBlinky = sqrt(power(abs(BlinkyObj.x - PackmanObj.x),2) + power(abs(BlinkyObj.y - PackmanObj.y),2));
+    }else{
+    
+    var distanceBlinky = 300;
+    }
+    if(instance_exists(PinkyObj)){
     var distancePinky = sqrt(power(abs(PinkyObj.x - PackmanObj.x),2) + power(abs(PinkyObj.y - PackmanObj.y),2));
+    }else{
+    var distancePinky = 300;
+    }
+    if(instance_exists(InkyObj)){
     var distanceInky = sqrt(power(abs(InkyObj.x - PackmanObj.x),2) + power(abs(InkyObj.y - PackmanObj.y),2));
+    }else{
+    var distanceInky = 300;
+    }
+    if(instance_exists(ClydeObj)){
     var distanceClyde = sqrt(power(abs(ClydeObj.x - PackmanObj.x),2) + power(abs(ClydeObj.y - PackmanObj.y),2));
-
+    }else{
+    var distanceClyde = 300;
+    }
+    
     //calculate average distance between pacman and all ghosts
     var averageDisAll = (distanceBlinky + distancePinky + distanceInky + distanceClyde) / 4;
 
@@ -27,7 +44,14 @@ if(current_time/1000 >= global.nextSecond){
     if(nearestGhostDistance > distanceClyde){
         nearestGhostDistance = distanceClyde;
     }
-    show_debug_message(global.lastPrintedSecond);
+    
+    //Update global variables
+    global.nearestGhostDistanceGlobal += nearestGhostDistance;
+    global.nearestGhostDistanceGlobal += nearestGhostDistance;
+    
+    show_debug_message(string(Level));
+   // show_debug_message(global.ailastlevel);
+    //show_debug_message(global.lastPrintedSecond);
 }
 
 
