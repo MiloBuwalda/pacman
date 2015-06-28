@@ -77,4 +77,3 @@ path_start(path,maxspeed,0,1);
 //with(TileObj) {visible = true; image_blend = c_white;}
 //with(startt) image_blend = c_red;
 //with(endt) image_blend = c_lime;
-
