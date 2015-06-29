@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>audio_stop_all();
+
 globalvar RoomLast; RoomLast = room;
 globalvar ThereAreGhosts; ThereAreGhosts = 0;
 globalvar BlueGhostScore; BlueGhostScore = 200;

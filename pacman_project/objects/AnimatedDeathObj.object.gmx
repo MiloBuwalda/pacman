@@ -96,6 +96,30 @@ instance_destroy();
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="58">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_goto(room_first);
+show_debug_message("DEATH!");
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="7">
       <action>
         <libid>1</libid>
@@ -118,6 +142,56 @@ image_speed = 0;
 alarm[0] = room_speed;
 
 global.numberOfDeaths++;
+global.deathsInThisLevel++;
+
+if(global.currentLevelCounter == 1){
+    global.deathsInLevel_1++;
+}
+if(global.currentLevelCounter == 2){
+    global.deathsInLevel_2++;
+}
+if(global.currentLevelCounter == 3){
+    global.deathsInLevel_3++;
+}
+
+if(global.numberOfDeaths == 1){
+    global.time_death_1 = (current_time);
+}
+if(global.numberOfDeaths == 2){
+    global.time_death_2 = (current_time);
+}
+if(global.numberOfDeaths == 3){
+    global.time_death_3 = (current_time);
+}
+if(global.numberOfDeaths == 4){
+    global.time_death_4 = (current_time);
+}
+if(global.numberOfDeaths == 5){
+    global.time_death_5 = (current_time);
+}
+if(global.numberOfDeaths == 6){
+    global.time_death_6 = (current_time);
+}
+if(global.numberOfDeaths == 7){
+    global.time_death_7 = (current_time);
+}
+if(global.numberOfDeaths == 8){
+    global.time_death_8 = (current_time);
+}
+if(global.numberOfDeaths == 9){
+    global.time_death_9 = (current_time);
+}
+
+
+
+if(global.deathsInThisLevel == 1){
+global.deathsInThisLevel = 0;
+global.numberOfDeaths = currentLevelCounter * 3;
+global.currentLevelCounter++;
+room_goto(PlayfieldStart_room);
+show_debug_message("DEATH!2");
+}
+
 </string>
           </argument>
         </arguments>

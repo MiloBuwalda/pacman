@@ -49,13 +49,33 @@ if(current_time/1000 >= global.nextSecond){
     global.nearestGhostDistanceGlobal += nearestGhostDistance;
     global.nearestGhostDistanceGlobal += nearestGhostDistance;
     
-    show_debug_message(string(Level));
+ //   show_debug_message(string(Level));
    // show_debug_message(global.ailastlevel);
     //show_debug_message(global.lastPrintedSecond);
+    Level = 1;
+    //PacManSpeed = .5;
+
+    
+    var file = file_text_open_append("test2.txt");
+    file_text_writeln(file);
+    file_text_write_string(file, string(current_time)+"," + string(nearestGhostDistance) +"," + string(averageDisAll));
+    file_text_close(file);
+    
 }
 
-
-//show_debug_message(PackmanObj.x);
+    if(global.deathsInThisLevel == 3){
+         global.levelsLost++;
+         //lives = 3;
+         global.deathsInThisLevel = 0;
+    }
+    
+    if(currentLevelCounter == 4){
+            //write shit to txtfile
+            ExperimentWriteToText();
+            game_end();
+    }  
+   //show_debug_message( string(global.currentLevelCounter) + "lol");
+show_debug_message(global.currentLevelCounter);
 
 
 //var file;

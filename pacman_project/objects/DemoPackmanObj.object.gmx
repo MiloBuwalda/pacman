@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>direction = 180
+            <string>ExperimentGlobal();
+
+direction = 180
 image_speed = .25;
 frame = 0;
 speed = 0;

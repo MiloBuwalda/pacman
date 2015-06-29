@@ -190,7 +190,8 @@ with(instance_nearest(x-6,y-6,PelletObj))
     if(point_distance(x,y,other.x-6,other.y-6) &lt; 8)
     {
         score +=10;
-        audio_play_sound(Pellet_snd, 0, false);
+       var snd =  audio_play_sound(Pellet_snd, 0, false);
+        audio_sound_gain(snd, 0.1, 0);
         instance_destroy();
         atepellet = 1;
         SpeedNow = PacDotsSpeed;

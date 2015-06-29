@@ -127,6 +127,7 @@
     </scripts>
     <script>scripts\ShowXY.gml</script>
     <script>scripts\ExperimentGlobal.gml</script>
+    <script>scripts\ExperimentWriteToText.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\PausedObj</object>
