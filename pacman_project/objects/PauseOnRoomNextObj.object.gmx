@@ -63,6 +63,7 @@ snd = audio_play_sound(Mellow_Music, 0, true);
 audio_sound_gain(snd, 0, 0);
 audio_sound_gain(snd, 1, 5000);
 lives = 3;
+score = 0;
 global.deathsInThisLevel = 0;
 </string>
           </argument>
