@@ -1,7 +1,7 @@
 //This script is first clled in DemoPackmanObj_Create_1 - Create
 
 var file = file_text_open_write("test2.txt");
-file_text_write_string(file, "time,"+"nearest_distance,"+"all_distance");
+file_text_write_string(file, "time,"+"nearest_distance,"+"all_distance,"+"distanceBlinky,"+"distancePinky,"+"distanceInky,"+"distanceClyde");
 file_text_close(file);
 
 //Updated in ExperimentScript
@@ -90,5 +90,14 @@ InkyInHouse = 0;
 
 globalvar ClydeInHouse;
 ClydeInHouse = 0;
+
+globalvar score_level_1;
+score_level_1 = 0;
+
+globalvar score_level_2;
+score_level_2 = 0;
+
+globalvar score_level_3;
+score_level_3 = 0;
 
 lives = 4;

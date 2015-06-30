@@ -82,7 +82,7 @@ if(current_time/1000 >= global.nextSecond){
     
         //calculate average distance between pacman and all ghosts
     if(ghostInPlayfield != 0){
-        var averageDisAll = (distanceBlinky + distancePinky + distanceInky + distanceClyde) / 4;
+        var averageDisAll = (distanceBlinky + distancePinky + distanceInky + distanceClyde) / ghostInPlayfield;
     }else{
         var averageDisAll = 0;
     }
@@ -100,7 +100,7 @@ if(current_time/1000 >= global.nextSecond){
     
     var file = file_text_open_append("test2.txt");
     file_text_writeln(file);
-    file_text_write_string(file, string(current_time)+"," + string(nearestGhostDistance) +"," + string(averageDisAll));
+    file_text_write_string(file, string(current_time)+"," + string(nearestGhostDistance) +"," + string(averageDisAll)+"," + string(distanceBlinky)+"," + string(distancePinky)+"," + string(distanceInky)+"," + string(distanceClyde));
     file_text_close(file);
     
 }
@@ -110,6 +110,18 @@ if(current_time/1000 >= global.nextSecond){
          //lives = 3;
          global.deathsInThisLevel = 0;
     }
+    
+        if(global.currentLevelCounter == 1){
+            global.score_level_1 = score;
+        }  
+        
+                if(global.currentLevelCounter == 2){
+            global.score_level_2 = score;
+        }  
+        
+                if(global.currentLevelCounter == 3){
+            global.score_level_3 = score;
+        }  
     
     if(global.currentLevelCounter == 4){
             //write shit to txtfile
@@ -122,6 +134,7 @@ if(current_time/1000 >= global.nextSecond){
     global.timeStartLevel = current_time;
     //show_debug_message("starttime updated YEEAAH!" + string(current_time));
     }
+    
    //show_debug_message( string(global.currentLevelCounter) + "lol");
 //show_debug_message(global.currentLevelCounter);
 //lives = 3;

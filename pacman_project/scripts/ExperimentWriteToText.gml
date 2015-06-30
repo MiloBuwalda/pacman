@@ -9,3 +9,7 @@ var file2 = file_text_open_append("test1.txt");
 file_text_writeln(file2);
 file_text_write_string(file2, "duration:" + string(current_time));
 file_text_close(file2);
+var file2 = file_text_open_append("test1.txt");
+file_text_writeln(file2);
+file_text_write_string(file2, "score_per_level:" + string(global.score_level_1) + "," + string(global.score_level_2) + "," + string(global.score_level_3));
+file_text_close(file2);
