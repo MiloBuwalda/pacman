@@ -161,25 +161,26 @@ if(global.numberOfDeaths == 2){
     global.time_death_2 = (current_time);
 }
 if(global.numberOfDeaths == 3){
-    global.time_death_3 = (current_time);
+    global.time_death_3 = (current_time - global.timeStartLevel);
 }
 if(global.numberOfDeaths == 4){
-    global.time_death_4 = (current_time);
+    global.time_death_4 = (current_time - global.timeStartLevel);
 }
 if(global.numberOfDeaths == 5){
-    global.time_death_5 = (current_time);
+    global.time_death_5 = (current_time - global.timeStartLevel);
 }
 if(global.numberOfDeaths == 6){
-    global.time_death_6 = (current_time);
+    global.time_death_6 = (current_time - global.timeStartLevel);
 }
 if(global.numberOfDeaths == 7){
-    global.time_death_7 = (current_time);
+    global.time_death_7 = (current_time - global.timeStartLevel);
 }
 if(global.numberOfDeaths == 8){
-    global.time_death_8 = (current_time);
+    global.time_death_8 = (current_time - global.timeStartLevel);
 }
 if(global.numberOfDeaths == 9){
-    global.time_death_9 = (current_time);
+    global.time_death_9 = (current_time - global.timeStartLevel);
+    
 }
 
 
@@ -189,7 +190,6 @@ global.deathsInThisLevel = 0;
 global.numberOfDeaths = currentLevelCounter * 3;
 global.currentLevelCounter++;
 room_goto(PlayfieldStart_room);
-show_debug_message("DEATH!2");
 }
 
 </string>

@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>alarm[0] = room_speed *4.5;
+
 </string>
           </argument>
         </arguments>
@@ -49,6 +50,7 @@
           <argument>
             <kind>1</kind>
             <string>visible = false;
+global.timeStartLevel = current_time;
 
 
 </string>

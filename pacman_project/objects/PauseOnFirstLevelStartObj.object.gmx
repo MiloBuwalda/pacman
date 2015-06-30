@@ -113,7 +113,7 @@ var snd = audio_play_sound(FirstLevelStart_snd, 0, false);
 audio_sound_gain(snd, 0.8, 0);
 snd = audio_play_sound(Mellow_Music, 0, true);
 audio_sound_gain(snd, 0, 0);
-audio_sound_gain(snd, 1, 10000);
+audio_sound_gain(snd, 1, 5000);
 </string>
           </argument>
         </arguments>

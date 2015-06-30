@@ -111,8 +111,9 @@ with(PackmanObj)
 alarm[0] = room_speed*2;
 snd = audio_play_sound(Mellow_Music, 0, true);
 audio_sound_gain(snd, 0, 0);
-audio_sound_gain(snd, 1, 10000);
+audio_sound_gain(snd, 1, 5000);
 lives = 3;
+global.numberOfDeaths = currentLevelCounter * 3;
 global.currentLevelCounter++;
 global.deathsInThisLevel = 0;
 </string>

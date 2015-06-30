@@ -30,6 +30,9 @@ mayUpdateNextLevel = 0;
 globalvar currentLevelCounter;
 currentLevelCounter = 1;
 
+globalvar timeStartLevel;
+timeStartLevel = 0;
+
 //Updated in AnimatedDeathObj - End Animation
 globalvar numberOfDeaths;
 numberOfDeaths = 0;
@@ -75,5 +78,17 @@ time_death_8 = 0;
 
 globalvar time_death_9;
 time_death_9 = 0;
+
+globalvar BlinkyInHouse;
+BlinkyInHouse = 0;
+
+globalvar PinkyInHouse;
+PinkyInHouse = 0;
+
+globalvar InkyInHouse;
+InkyInHouse = 0;
+
+globalvar ClydeInHouse;
+ClydeInHouse = 0;
 
 lives = 4;
