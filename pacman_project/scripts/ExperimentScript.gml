@@ -80,6 +80,7 @@ if(current_time/1000 >= global.nextSecond){
     if(ghostInPlayfield != 0){
         var averageDisAll = (distanceBlinky + distancePinky + distanceInky + distanceClyde) / 4;
     }else{
+        nearestGhostDistance = 0;
         var averageDisAll = 0;
     }
     
