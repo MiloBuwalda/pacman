@@ -450,8 +450,8 @@ alarm[1] = 1;
             <kind>1</kind>
             <string>//Essentially a finish maze cheat
 
-with(PelletObj)
-instance_destroy();
+//with(PelletObj)
+//instance_destroy();
 </string>
           </argument>
         </arguments>

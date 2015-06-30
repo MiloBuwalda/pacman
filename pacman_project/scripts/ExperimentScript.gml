@@ -9,36 +9,36 @@ if(current_time/1000 >= global.nextSecond){
     if(instance_exists(BlinkyObj)){
     var distanceBlinky = sqrt(power(abs(BlinkyObj.x - PackmanObj.x),2) + power(abs(BlinkyObj.y - PackmanObj.y),2));
     }else if(BlinkyInHouse.InGhostHouse = 1){
-    var distanceBlinky = 0;
+    var distanceBlinky = 999;
       }else{
     
-    var distanceBlinky = 0;
+    var distanceBlinky = 999;
     }
     if(instance_exists(PinkyObj)){
     var distancePinky = sqrt(power(abs(PinkyObj.x - PackmanObj.x),2) + power(abs(PinkyObj.y - PackmanObj.y),2));
     }else if(PinkyInHouse.InGhostHouse = 1){
-    var distancePinky = 0;
+    var distancePinky = 999;
     ghostInPlayfield--;
     }else{
-    var distancePinky = 0;
+    var distancePinky = 999;
     ghostInPlayfield--;
     }
     if(instance_exists(InkyObj)){
     var distanceInky = sqrt(power(abs(InkyObj.x - PackmanObj.x),2) + power(abs(InkyObj.y - PackmanObj.y),2));
     }else if(InkyInHouse.InGhostHouse = 1){
-    var distanceInky = 0;
+    var distanceInky = 999;
     ghostInPlayfield--;
      }else{
-    var distanceInky = 0;
+    var distanceInky = 999;
     ghostInPlayfield--;
     }
     if(instance_exists(ClydeObj)){
     var distanceClyde = sqrt(power(abs(ClydeObj.x - PackmanObj.x),2) + power(abs(ClydeObj.y - PackmanObj.y),2));
     }else if(ClydeInHouse.InGhostHouse = 1){
-    var distanceClyde = 0;
+    var distanceClyde = 999;
     ghostInPlayfield--;
      }else{
-    var distanceClyde = 0;
+    var distanceClyde = 999;
     ghostInPlayfield--;
     }
    // show_debug_message("BlinkyObj: " + string(BlinkyObj.x) + "," + string(BlinkyObj.y));
@@ -46,17 +46,12 @@ if(current_time/1000 >= global.nextSecond){
    // show_debug_message("InkyObj: " + string(InkyObj.x) + "," + string(InkyObj.y));
    // show_debug_message("ClydeObj: " + string(ClydeObj.x) + "," + string(ClydeObj.y));
     
-    //calculate average distance between pacman and all ghosts
-    if(ghostInPlayfield != 0){
-        var averageDisAll = (distanceBlinky + distancePinky + distanceInky + distanceClyde) / 4;
-    }else{
-        var averageDisAll = 0;
-    }
     
 
     //Find distance to nearest ghost
-    var nearestGhostDistance;
-    if(distanceBlinky < distancePinky){
+    var nearestGhostDistance = 0;
+    
+    if(distanceBlinky < distancePinky ){
         nearestGhostDistance = distanceBlinky;
     }else{
        nearestGhostDistance = distancePinky;
@@ -66,6 +61,26 @@ if(current_time/1000 >= global.nextSecond){
     }
     if(nearestGhostDistance > distanceClyde){
         nearestGhostDistance = distanceClyde;
+    }
+    
+    if(distanceBlinky == 999){
+        distanceBlinky = 0
+    }
+        if(distancePinky == 999){
+        distancePinky = 0
+    }
+        if(distanceInky == 999){
+        distanceInky = 0
+    }
+        if(distanceClyde == 999){
+        distanceClyde = 0
+    }
+    
+        //calculate average distance between pacman and all ghosts
+    if(ghostInPlayfield != 0){
+        var averageDisAll = (distanceBlinky + distancePinky + distanceInky + distanceClyde) / 4;
+    }else{
+        var averageDisAll = 0;
     }
     
     //Update global variables

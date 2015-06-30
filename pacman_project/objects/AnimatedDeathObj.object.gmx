@@ -155,10 +155,10 @@ if(global.currentLevelCounter == 3){
 }
 
 if(global.numberOfDeaths == 1){
-    global.time_death_1 = (current_time);
+    global.time_death_1 = (current_time - global.timeStartLevel);
 }
 if(global.numberOfDeaths == 2){
-    global.time_death_2 = (current_time);
+    global.time_death_2 = (current_time - global.timeStartLevel);
 }
 if(global.numberOfDeaths == 3){
     global.time_death_3 = (current_time - global.timeStartLevel);
