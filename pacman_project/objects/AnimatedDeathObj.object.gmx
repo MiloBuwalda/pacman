@@ -184,7 +184,7 @@ if(global.numberOfDeaths == 9){
 
 
 
-if(global.deathsInThisLevel == 1){
+if(global.deathsInThisLevel == 3){
 global.deathsInThisLevel = 0;
 global.numberOfDeaths = currentLevelCounter * 3;
 global.currentLevelCounter++;

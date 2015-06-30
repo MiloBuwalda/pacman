@@ -10,22 +10,22 @@ if(current_time/1000 >= global.nextSecond){
     var distanceBlinky = sqrt(power(abs(BlinkyObj.x - PackmanObj.x),2) + power(abs(BlinkyObj.y - PackmanObj.y),2));
     }else{
     
-    var distanceBlinky = 300;
+    var distanceBlinky = 999;
     }
     if(instance_exists(PinkyObj)){
     var distancePinky = sqrt(power(abs(PinkyObj.x - PackmanObj.x),2) + power(abs(PinkyObj.y - PackmanObj.y),2));
     }else{
-    var distancePinky = 300;
+    var distancePinky = 999;
     }
     if(instance_exists(InkyObj)){
     var distanceInky = sqrt(power(abs(InkyObj.x - PackmanObj.x),2) + power(abs(InkyObj.y - PackmanObj.y),2));
     }else{
-    var distanceInky = 300;
+    var distanceInky = 999;
     }
     if(instance_exists(ClydeObj)){
     var distanceClyde = sqrt(power(abs(ClydeObj.x - PackmanObj.x),2) + power(abs(ClydeObj.y - PackmanObj.y),2));
     }else{
-    var distanceClyde = 300;
+    var distanceClyde = 999;
     }
     
     //calculate average distance between pacman and all ghosts
@@ -69,14 +69,14 @@ if(current_time/1000 >= global.nextSecond){
          global.deathsInThisLevel = 0;
     }
     
-    if(currentLevelCounter == 4){
+    if(global.currentLevelCounter == 4){
             //write shit to txtfile
             ExperimentWriteToText();
             game_end();
     }  
    //show_debug_message( string(global.currentLevelCounter) + "lol");
 show_debug_message(global.currentLevelCounter);
-
+//lives = 3;
 
 //var file;
 //file = file_text_open_write("C:\level.txt");
