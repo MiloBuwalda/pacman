@@ -8,36 +8,37 @@ if(current_time/1000 >= global.nextSecond){
     //Calculate distance between pacman and each of the ghosts
     if(instance_exists(BlinkyObj)){
     var distanceBlinky = sqrt(power(abs(BlinkyObj.x - PackmanObj.x),2) + power(abs(BlinkyObj.y - PackmanObj.y),2));
-    }else if(BlinkyInHouse.InGhostHouse = 1){
+    if(BlinkyInHouse.InGhostHouse = 1){
     var distanceBlinky = 999;
-      }else{
+      }}else{
     
     var distanceBlinky = 999;
     }
     if(instance_exists(PinkyObj)){
     var distancePinky = sqrt(power(abs(PinkyObj.x - PackmanObj.x),2) + power(abs(PinkyObj.y - PackmanObj.y),2));
-    }else if(PinkyInHouse.InGhostHouse = 1){
+     if(PinkyInHouse.InGhostHouse = 1){
     var distancePinky = 999;
     ghostInPlayfield--;
-    }else{
+    }}else{
     var distancePinky = 999;
     ghostInPlayfield--;
     }
     if(instance_exists(InkyObj)){
     var distanceInky = sqrt(power(abs(InkyObj.x - PackmanObj.x),2) + power(abs(InkyObj.y - PackmanObj.y),2));
-    }else if(InkyInHouse.InGhostHouse = 1){
+    if(InkyInHouse.InGhostHouse = 1){
     var distanceInky = 999;
     ghostInPlayfield--;
-     }else{
+     }}else{
     var distanceInky = 999;
     ghostInPlayfield--;
     }
     if(instance_exists(ClydeObj)){
     var distanceClyde = sqrt(power(abs(ClydeObj.x - PackmanObj.x),2) + power(abs(ClydeObj.y - PackmanObj.y),2));
-    }else if(ClydeInHouse.InGhostHouse = 1){
+    
+    if(ClydeInHouse.InGhostHouse = 1){
     var distanceClyde = 999;
     ghostInPlayfield--;
-     }else{
+     }}else{
     var distanceClyde = 999;
     ghostInPlayfield--;
     }
